@@ -8,6 +8,14 @@ import { Router } from 'express';
 const transactionsRouter = Router();
 
 transactionsRouter.get('/', async (request, response) => {
+  return response.json({
+    transactions: [1, 2, 3],
+    balance: {
+      income: 8000,
+      outcome: 6000,
+      total: 2000,
+    },
+  });
   // TODO
 });
 
